@@ -1,0 +1,55 @@
+@import '../../colour.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $secondary-drop-down-menu;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter {
+  font-family: $helvetica;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 0, 9;
+  letter-spacing: 0.02em;
+
+  color: $white-text-color;
+}
+
+.hidden {
+  font-family: $helvetica;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1;
+  margin-left: 10px;
+  letter-spacing: 0.02em;
+  color: $button-hover;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+    // position: relative;
+  }
+}

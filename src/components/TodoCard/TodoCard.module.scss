@@ -1,0 +1,258 @@
+.appear {
+  opacity: 0;
+  // transform: translateX(-100%);
+}
+.appearActive {
+  opacity: 1;
+  // transform: translateX(0);
+  transition: all 1500ms;
+}
+
+$mobile: 320px;
+$tablet: 768px;
+$desctop: 1280px;
+.dark {
+  background-color: #15395a !important;
+}
+.white {
+  color: white;
+}
+.hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
+.todoCard {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: calc(100% - 30px);
+  background-color: #ffffff;
+  margin: 15px;
+  height: 260px;
+  box-shadow: -3px -4px 4px rgba(21, 57, 90, 0.03),
+    3px 4px 4px rgba(21, 57, 90, 0.03);
+  border-radius: 10px;
+  @media screen and (min-width: $tablet) {
+    margin: 14px;
+    width: calc((100% - 28px * 3) / 3);
+    height: 199px;
+  }
+  @media screen and (min-width: $desctop) {
+    width: calc((100% - 28px * 5) / 5);
+  }
+}
+.mainCardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 19px 21px 33px 21px;
+  @media screen and (min-width: $tablet) {
+    padding: 19px 21px 21px 21px;
+  }
+}
+.topContainer {
+  width: 100%;
+}
+.levelStarCupContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.starCupIcon {
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  filter: drop-shadow(0px 3px 4px rgba(0, 215, 255, 0.25));
+  @media screen and (min-width: $tablet) {
+    width: 15px;
+    height: 15px;
+  }
+}
+.operationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  height: 14px;
+  @media screen and (min-width: $tablet) {
+    margin-top: 20px;
+    height: 12px;
+  }
+}
+.operation {
+  display: inline-block;
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #b9c3c8;
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+  }
+}
+.title {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  width: 100%;
+  max-height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+}
+.inline {
+  border: none;
+  outline: none;
+  margin-bottom: 9px;
+  border-bottom: 1px solid #00d7ff;
+}
+
+.bottomContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+.categoryContainer {
+  margin: 0 0 0 -21px;
+  padding: 9px 12px 10px 12px;
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  top: 114px;
+  background: #ffffff;
+  box-shadow: -3px -4px 4px rgba(21, 57, 90, 0.05),
+    3px 4px 4px rgba(21, 57, 90, 0.05);
+  border-radius: 10px;
+  line-height: calc(1em + 5px);
+  @media screen and (min-width: $tablet) {
+    font-size: 11px;
+    width: 90px;
+    height: 110px;
+    padding: 9px 12px 10px 12px;
+  }
+}
+.categoryList li {
+  cursor: pointer;
+
+  list-style-type: none;
+}
+
+.selectedCategoryContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: -21px;
+  width: 120px;
+  height: 35px;
+  border-radius: 0px 25px 25px 0px;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
+    width: 88px;
+    height: 25px;
+    font-size: 11px;
+  }
+}
+.selectedCategory {
+  margin: 0 0 0 21px;
+  display: block;
+}
+
+.saveClearDoneStartContainer {
+  display: flex;
+  align-items: center;
+}
+
+.saveClearDoneIcon {
+  width: 20px;
+  height: 20px;
+  @media screen and (min-width: $tablet) {
+    width: 22px;
+    height: 20px;
+  }
+}
+.clearIcon,
+.saveIcon {
+  padding: 3px 8px 3px 0;
+  margin-right: 9px;
+  border-right: 1px solid #b9c3c8;
+  cursor: pointer;
+}
+.doneIcon {
+  cursor: pointer;
+  width: 18px;
+  @media screen and (min-width: $tablet) {
+    width: 14px;
+  }
+}
+.startButton {
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #00d7ff;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+}
+.completedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 19px 18px 15px 17px;
+}
+.phraseCompleted {
+  font-size: 13px;
+  @media screen and (min-width: $tablet) {
+    font-size: 11px;
+  }
+}
+.cutTitle {
+  font-size: 14px;
+  color: #00d7ff;
+  text-decoration: underline;
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+  }
+}
+.completedIcon {
+  width: 203px;
+  height: 182px;
+  // margin-top: 10px;
+  color: #b9c3c8;
+  @media screen and (min-width: $tablet) {
+    width: 144px;
+    height: 124px;
+    margin-top: 10px;
+  }
+}
+.continue::after {
+  content: ' →';
+  color: #00d7ff;
+}
+.continue {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 0px;
+  color: #b9c3c8;
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+  }
+}
+.animeCompleted-enter {
+  opacity: 0;
+  transform: scale(0, 0);
+}
+.animeCompleted-enter-active {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: all 250ms linear;
+}
+.animeCard-exit {
+  opacity: 0;
+  transform: scale(0, 0);
+}
+.animeCard-exit-active {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: all 250ms linear;
+}

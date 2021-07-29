@@ -1,0 +1,16 @@
+@import '../../colour.scss';
+
+.logo {
+  font-family: $helvetica;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: $easy-primary-accent-colour;
+  // cursor: pointer;
+
+  @media (max-width: 767px) {
+    margin-right: auto;
+  }
+}

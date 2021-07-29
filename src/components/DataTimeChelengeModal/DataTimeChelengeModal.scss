@@ -1,0 +1,107 @@
+$mobile: 320px;
+$tablet: 768px;
+$desctop: 1280px;
+
+.chelenge-timer-container {
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.chelenge-timer-options-close {
+  width: 15px;
+  height: 15px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  cursor: pointer;
+}
+
+.chelenge-timer-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chelenge-timer-placeholder {
+  display: flex;
+
+  // justify-content: space-between;
+  align-items: center;
+
+  color: #b9c3c8;
+  cursor: pointer;
+}
+.chelenge-timer-placeholder:hover {
+  color: black;
+}
+
+.chelenge-timer-options {
+  position: absolute;
+  top: -30%;
+  left: 27%;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  flex-direction: column;
+
+  visibility: hidden;
+  overflow: hidden;
+
+  height: 120px;
+
+  padding: 10px;
+  color: #b9c3c8;
+  opacity: 0;
+  background-color: white;
+  border-radius: 10%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @media screen and (min-width: $tablet) {
+    left: 20%;
+  }
+}
+
+.chelenge-timer-active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.chelenge-timer-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 1px dotted #fff;
+}
+
+.chelenge-timer-item:hover {
+  color: #000;
+}
+
+.chelenge-timer-item-container {
+  width: 80px;
+  height: 90px;
+  overflow: scroll;
+}
+
+.chelenge-calendar-item-container {
+  display: block;
+  width: 54px;
+  margin: auto;
+}
+
+.chelenge-calendar-icon {
+  width: 12px;
+  height: 14px;
+  margin-left: 5px;
+}
